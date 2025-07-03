@@ -1,17 +1,28 @@
-# Start with a base image containing Java runtime
-FROM openjdk:17-jdk-slim
+# Use Maven to build the project
+FROM maven:3.8.1-openjdk-17-slim AS build
 
-# Add a volume pointing to /tmp
-VOLUME /tmp
-
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy the jar file to the container
-COPY target/*.jar app.jar
+# Copy pom.xml and download dependencies
+COPY pom.xml .
 
-# Expose the port (Render injects PORT env variable)
+RUN mvn dependency:go-offline
+
+# Copy the rest of the project
+COPY src ./src
+
+# Package the application
+RUN mvn clean package -DskipTests
+
+# Create the final image
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+# Copy the built jar from the previous build stage
+COPY --from=build /app/target/*.jar app.jar
+
 EXPOSE 8080
 
-# Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
