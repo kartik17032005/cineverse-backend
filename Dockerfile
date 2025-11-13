@@ -1,28 +1,43 @@
-# Use Maven to build the project
-FROM maven:3.8.1-openjdk-17-slim AS build
-
-# Set working directory
+# ===================== Build Stage =====================
+FROM eclipse-temurin:17-jdk-focal AS build
 WORKDIR /app
 
-# Copy pom.xml and download dependencies
+# Copy Maven configuration first (caching)
 COPY pom.xml .
+COPY mvnw .
+COPY .mvn .mvn
+RUN chmod +x mvnw
 
-RUN mvn dependency:go-offline
+# Download dependencies (offline)
+RUN ./mvnw -q -N dependency:go-offline
 
-# Copy the rest of the project
+# Copy source and build jar
 COPY src ./src
+RUN ./mvnw -DskipTests package -P!native -Dskip.native -e -Dspring.profiles.active=prod
 
-# Package the application
-RUN mvn clean package -DskipTests
-
-# Create the final image
-FROM openjdk:17-jdk-slim
-
+# ===================== Runtime Stage =====================
+FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
-# Copy the built jar from the previous build stage
-COPY --from=build /app/target/*.jar app.jar
+# Install curl for healthcheck
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
+# Create non-root user
+RUN useradd -ms /bin/bash appuser
+USER appuser
+
+# Copy built jar from build stage
+COPY --from=build --chown=appuser /app/target/*.jar app.jar
+
+# Healthcheck (optional)
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s \
+  CMD curl -f http://localhost:8080/actuator/health || exit 1
+
+# Memory settings (tweak as needed)
+ENV JAVA_OPTS="-Xms256m -Xmx1g"
+
+# Expose port (Spring Boot default)
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Use dynamic port for Render deployment
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar /app/app.jar --server.port=${PORT:-8080}" ]
