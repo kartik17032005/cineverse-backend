@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Outer glow effect -->
+    <path
+        android:fillColor="#60FF0080"
+        android:strokeWidth="3"
+        android:strokeColor="#40FF0080"
+        android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z" />
+
+    <!-- Main heart shape -->
+    <path
+        android:fillColor="#FF0080"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF"
+        android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z" />
+
+    <!-- Inner highlight -->
+    <path
+        android:fillColor="#FFFF0080"
+        android:pathData="M12,18.5l-1.2,-1.1C6.4,13.36 4,10.78 4,8.5 4,6.5 5.5,5 7.5,5c1.04,0 2.04,0.52 2.71,1.36h0.58C11.46,5.52 12.46,5 13.5,5 15.5,5 17,6.5 17,8.5c0,2.28 -2.4,4.86 -6.8,8.9L12,18.5z" />
+
+    <!-- Neon pulse line -->
+    <path
+        android:fillColor="#00FFFFFF"
+        android:strokeWidth="0.5"
+        android:strokeColor="#FFFF0080"
+        android:pathData="M7.5,9h9" />
+</vector>

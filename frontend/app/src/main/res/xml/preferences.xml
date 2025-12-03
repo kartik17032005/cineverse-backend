@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Top space -->
+    <Preference
+        android:key="space_top"
+        android:layout="@layout/preference_space_large"
+        android:selectable="false" />
+
+    <!-- Account Section -->
+    <PreferenceCategory
+        android:title="Account"
+        android:icon="@drawable/ic_account_circle"
+        android:layout="@layout/preference_category_cool" />
+
+    <Preference
+        android:key="edit_profile"
+        android:title="Edit Profile"
+        android:summary="Update your account info"
+        android:icon="@drawable/ic_edit"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="change_password"
+        android:title="Change Password"
+        android:summary="Change your password"
+        android:icon="@drawable/ic_lock"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="manage_devices"
+        android:title="Devices"
+        android:summary="View or sign out of devices"
+        android:icon="@drawable/ic_devices"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="logout"
+        android:title="Log Out"
+        android:icon="@drawable/ic_logout"
+        android:layout="@layout/preference_icon_24" />
+
+    <!-- Appearance -->
+    <PreferenceCategory
+        android:title="Appearance"
+        android:icon="@drawable/ic_palette"
+        android:layout="@layout/preference_category_cool" />
+    <ListPreference
+        android:key="theme"
+        android:title="App Theme"
+        android:summary="%s"
+        android:entries="@array/theme_options"
+        android:entryValues="@array/theme_values"
+        android:icon="@drawable/ic_theme"
+        android:layout="@layout/preference_icon_24" />
+    <ListPreference
+        android:key="language"
+        android:title="App Language"
+        android:summary="%s"
+        android:entries="@array/language_options"
+        android:entryValues="@array/language_values"
+        android:icon="@drawable/ic_language"
+        android:layout="@layout/preference_icon_24" />
+
+    <!-- Notifications -->
+    <PreferenceCategory
+        android:title="Notifications"
+        android:icon="@drawable/ic_notifications"
+        android:layout="@layout/preference_category_cool" />
+    <SwitchPreferenceCompat
+        android:key="push_notifications"
+        android:title="Enable Notifications"
+        android:icon="@drawable/ic_notifications_active"
+        android:layout="@layout/preference_switch_icon_24" />
+    <SwitchPreferenceCompat
+        android:key="recommendation_notifications"
+        android:title="Show Recommendations"
+        android:icon="@drawable/ic_recommend"
+        android:layout="@layout/preference_switch_icon_24" />
+    <SwitchPreferenceCompat
+        android:key="new_release_notifications"
+        android:title="Notify on New Releases"
+        android:icon="@drawable/ic_new_release"
+        android:layout="@layout/preference_switch_icon_24" />
+
+    <!-- Playback & Streaming -->
+    <PreferenceCategory
+        android:title="Playback and Streaming"
+        android:icon="@drawable/ic_stream"
+        android:layout="@layout/preference_category_cool" />
+    <ListPreference
+        android:key="playback_quality"
+        android:title="Playback Quality"
+        android:summary="%s"
+        android:entries="@array/quality_options"
+        android:entryValues="@array/quality_values"
+        android:icon="@drawable/ic_hd"
+        android:layout="@layout/preference_icon_24" />
+    <SwitchPreferenceCompat
+        android:key="autoplay_next"
+        android:title="Autoplay Next"
+        android:icon="@drawable/ic_autoplay"
+        android:layout="@layout/preference_switch_icon_24" />
+    <ListPreference
+        android:key="subtitle_language"
+        android:title="Subtitle Language"
+        android:summary="%s"
+        android:entries="@array/language_options"
+        android:entryValues="@array/language_values"
+        android:icon="@drawable/ic_subtitles"
+        android:layout="@layout/preference_icon_24" />
+
+    <!-- Parental Controls -->
+    <PreferenceCategory
+        android:title="Parental Controls"
+        android:icon="@drawable/ic_parental_control"
+        android:layout="@layout/preference_category_cool" />
+    <Preference
+        android:key="setup_pin"
+        android:title="Set Parental PIN"
+        android:summary="Protect Cineverse for your kid"
+        android:icon="@drawable/ic_pin"
+        android:layout="@layout/preference_icon_24" />
+    <ListPreference
+        android:key="age_filter"
+        android:title="Content Restriction"
+        android:summary="%s"
+        android:entries="@array/age_limits"
+        android:entryValues="@array/age_values"
+        android:icon="@drawable/ic_age"
+        android:layout="@layout/preference_icon_24" />
+
+    <!-- Downloads & Storage -->
+    <PreferenceCategory
+        android:title="Downloads and Storage"
+        android:icon="@drawable/ic_download"
+        android:layout="@layout/preference_category_cool" />
+    <ListPreference
+        android:key="download_quality"
+        android:title="Download Quality"
+        android:summary="%s"
+        android:entries="@array/quality_options"
+        android:entryValues="@array/quality_values"
+        android:icon="@drawable/ic_hd"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="manage_downloads"
+        android:title="Manage Downloads"
+        android:icon="@drawable/ic_manage_downloads"
+        android:layout="@layout/preference_icon_24" />
+
+    <!-- Privacy & Legal -->
+    <PreferenceCategory
+        android:title="Privacy and Legal"
+        android:icon="@drawable/ic_privacy"
+        android:layout="@layout/preference_category_cool" />
+    <Preference
+        android:key="privacy_policy"
+        android:title="Privacy Policy"
+        android:icon="@drawable/ic_privacy_policy"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="terms_of_use"
+        android:title="Terms of Use"
+        android:icon="@drawable/ic_terms"
+        android:layout="@layout/preference_icon_24" />
+    <SwitchPreferenceCompat
+        android:key="personalized_ads"
+        android:title="Personalized Ads"
+        android:icon="@drawable/ic_ads"
+        android:layout="@layout/preference_switch_icon_24" />
+
+    <!-- Support -->
+    <PreferenceCategory
+        android:title="Support"
+        android:icon="@drawable/ic_support"
+        android:layout="@layout/preference_category_cool" />
+    <Preference
+        android:key="help_center"
+        android:title="Help Center"
+        android:icon="@drawable/ic_help"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="contact_support"
+        android:title="Contact Support"
+        android:icon="@drawable/ic_contact"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="report_problem"
+        android:title="Report a Problem"
+        android:icon="@drawable/ic_report"
+        android:layout="@layout/preference_icon_24" />
+
+    <!-- About -->
+    <PreferenceCategory
+        android:title="About"
+        android:icon="@drawable/ic_info"
+        android:layout="@layout/preference_category_cool" />
+    <Preference
+        android:key="app_version"
+        android:title="App Version"
+        android:summary="1.0.0"
+        android:icon="@drawable/ic_version"
+        android:layout="@layout/preference_icon_24" />
+    <Preference
+        android:key="open_source"
+        android:title="Open Source"
+        android:icon="@drawable/ic_open_source"
+        android:layout="@layout/preference_icon_24" />
+
+</androidx.preference.PreferenceScreen>

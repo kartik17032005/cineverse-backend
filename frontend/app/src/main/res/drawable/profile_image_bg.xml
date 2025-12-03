@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- profile_image_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- Background color (dark blue or your theme) -->
+    <solid android:color="#2C2F5E" />
+    <!-- Optional accent border -->
+    <stroke
+        android:width="2dp"
+        android:color="#00FFF7" />
+</shape>

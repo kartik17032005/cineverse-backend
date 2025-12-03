@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Holographic Movie Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hologramTile"
+        android:layout_width="170dp"
+        android:layout_height="270dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:translationZ="8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/hologram_tile_bg"
+            android:clipChildren="false">
+
+            <!-- Movie Poster -->
+            <ImageView
+                android:id="@+id/posterImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder"
+                android:clipToOutline="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Holographic Overlay -->
+            <View
+                android:id="@+id/hologramOverlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/hologram_tile_overlay"
+                android:alpha="0.12"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Neon Rating Chip -->
+            <LinearLayout
+                android:id="@+id/neonRatingChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/neon_rating_chip_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:elevation="15dp"
+                android:orientation="horizontal"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:src="@drawable/ic_star_neon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:tint="#FFD700"
+                    android:clickable="false"
+                    android:focusable="false" />
+
+                <TextView
+                    android:id="@+id/ratingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8.5"
+                    android:textColor="#FFD700"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="4dp"
+                    android:shadowColor="#FFFFD700"
+                    android:shadowRadius="8"
+                    android:clickable="false"
+                    android:focusable="false"/>
+            </LinearLayout>
+
+            <!-- Floating Heart with Pulse -->
+            <ImageButton
+                android:id="@+id/wishlistButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/floating_heart_pulse_bg"
+                android:src="@drawable/ic_heart_hologram"
+                app:tint="#FF0080"
+                android:elevation="18dp"
+                android:translationZ="5dp"
+                android:contentDescription="Add to Wishlist"
+                android:focusable="false"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Heart Pulse Ring -->
+            <View
+                android:id="@+id/heartPulseRing"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/heart_pulse_ring"
+                android:alpha="0.4"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintTop_toTopOf="@id/wishlistButton"
+                app:layout_constraintBottom_toBottomOf="@id/wishlistButton"
+                app:layout_constraintStart_toStartOf="@id/wishlistButton"
+                app:layout_constraintEnd_toEndOf="@id/wishlistButton" />
+
+            <!-- Cyberglass Title Bar -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/cyberglass_movie_title_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SUPERMAN"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:letterSpacing="0.08"
+                    android:shadowColor="#FF00FFFF"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="12"
+                    android:clickable="false"
+                    android:focusable="false"/>
+            </LinearLayout>
+
+            <!-- Digital Noise Effect -->
+            <View
+                android:id="@+id/digitalNoise"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/digital_noise_anim"
+                android:alpha="0.05"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Hover Magnetic Field -->
+    <View
+        android:id="@+id/hoverField"
+        android:layout_width="190dp"
+        android:layout_height="290dp"
+        android:background="@drawable/hover_magnetic_field"
+        android:alpha="0"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

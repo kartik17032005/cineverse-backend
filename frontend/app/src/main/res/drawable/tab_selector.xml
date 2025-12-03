@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- SELECTED -->
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <solid android:color="#00FFF7" />
+            <size android:width="10dp" android:height="10dp" />
+            <padding android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp" />
+
+        </shape>
+    </item>
+
+    <!-- UNSELECTED -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#444444" />
+            <padding android:left="2dp" android:top="2dp" android:right="7dp" android:bottom="2dp" />
+            <size android:width="8dp" android:height="8dp" />
+        </shape>
+    </item>
+
+</selector>

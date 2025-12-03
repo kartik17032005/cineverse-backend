@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#80FFD700"
+                android:centerColor="#60FFD700"
+                android:endColor="#40FFD700" />
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+    <!-- Glass background -->
+    <item android:insetLeft="2dp" android:insetTop="2dp" android:insetRight="2dp" android:insetBottom="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#80FFFFFF"
+                android:centerColor="#60FFFFFF"
+                android:endColor="#40FFFFFF" />
+            <corners android:radius="13dp" />
+            <stroke android:width="1dp" android:color="#FFFFD700" />
+        </shape>
+    </item>
+    <!-- Inner highlight -->
+    <item android:insetLeft="4dp" android:insetTop="4dp" android:insetRight="4dp" android:insetBottom="4dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#40FFD700"
+                android:centerColor="#20FFD700"
+                android:endColor="#00FFD700" />
+            <corners android:radius="11dp" />
+        </shape>
+    </item>
+</layer-list>

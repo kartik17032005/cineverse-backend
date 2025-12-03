@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <size android:height="6dp" />
+
+    <gradient
+        android:startColor="#00FFF7"
+        android:centerColor="#00FFF7"
+        android:endColor="#00FFF7"
+        android:angle="0"
+        android:type="linear" />
+
+    <!-- Glow effect -->
+    <corners android:radius="50dp"/>
+    <padding
+        android:left="10dp"
+        android:right="10dp"/>
+    <solid android:color="#00FFF7"/>
+    <stroke
+        android:width="2dp"
+        android:color="#00FFF7"/>
+
+</shape>

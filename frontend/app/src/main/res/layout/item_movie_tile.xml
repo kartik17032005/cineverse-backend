@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="260dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="26dp"
+    app:cardBackgroundColor="#252939F7"
+    app:cardElevation="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/posterImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true" />
+
+        <!-- Top right wishlist heart button -->
+        <ImageButton
+            android:id="@+id/wishlistButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            app:tint="#FF2B2B"
+            android:src="@drawable/ic_heart_outline"
+            android:elevation="8dp" />
+
+        <!-- Movie title bar with frosted glass background -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/title_frosted_bg"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUPERMAN"
+                android:textColor="#00FFF7"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="16dp"
+                android:shadowColor="#8000FFF7"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="12" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

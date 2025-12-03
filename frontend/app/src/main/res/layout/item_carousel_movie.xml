@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carouselCardRoot"
+    android:layout_width="280dp"
+    android:layout_height="400dp"
+    android:layout_marginEnd="16dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Holographic Card Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hologramCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="25dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:translationZ="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/hologram_card_bg"
+            android:clipChildren="false">
+
+            <!-- Movie Poster with Holographic Effect -->
+            <ImageView
+                android:id="@+id/carouselPoster"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder"
+                android:clipToOutline="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Holographic Scan Lines -->
+            <View
+                android:id="@+id/scanLines"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="0.15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Floating Neon Play Button -->
+            <ImageButton
+                android:id="@+id/neonPlayButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/neon_play_button_bg"
+                android:src="@drawable/ic_play_hologram"
+                android:contentDescription="Play Movie"
+                app:tint="#00FFFF"
+                android:elevation="20dp"
+                android:translationZ="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="120dp" />
+
+            <!-- Energy Pulse Ring around Play Button -->
+            <View
+                android:id="@+id/energyPulse"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/energy_pulse_ring"
+                app:layout_constraintTop_toTopOf="@id/neonPlayButton"
+                app:layout_constraintBottom_toBottomOf="@id/neonPlayButton"
+                app:layout_constraintStart_toStartOf="@id/neonPlayButton"
+                app:layout_constraintEnd_toEndOf="@id/neonPlayButton" />
+
+            <!-- Cyberglass Title Bar -->
+            <View
+                android:id="@+id/cyberglassBar"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:background="@drawable/cyberglass_title_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Neon Movie Title -->
+            <TextView
+                android:id="@+id/carouselTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SUPERMAN"
+                android:textColor="#00FFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/poppins_semibold"
+                android:letterSpacing="0.15"
+                android:shadowColor="#FF00FFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="25dp" />
+
+            <!-- Floating Heart with Neon Glow -->
+            <ImageButton
+                android:id="@+id/wishlistButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/neon_heart_bg"
+                android:contentDescription="Add to Wishlist"
+                android:src="@drawable/ic_heart_neon"
+                app:tint="#FF0080"
+                android:elevation="18dp"
+                android:translationZ="6dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Heart Glow Effect -->
+            <View
+                android:id="@+id/heartGlow"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/heart_glow_effect"
+                android:alpha="0.6"
+                app:layout_constraintTop_toTopOf="@id/wishlistButton"
+                app:layout_constraintBottom_toBottomOf="@id/wishlistButton"
+                app:layout_constraintStart_toStartOf="@id/wishlistButton"
+                app:layout_constraintEnd_toEndOf="@id/wishlistButton" />
+
+            <!-- Energy Streams -->
+            <View
+                android:id="@+id/energyStreams"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/energy_streams_anim"
+                android:alpha="0.25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Magnetic Field Effect -->
+    <View
+        android:id="@+id/magneticField"
+        android:layout_width="300dp"
+        android:layout_height="420dp"
+        android:background="@drawable/magnetic_field_effect"
+        android:alpha="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

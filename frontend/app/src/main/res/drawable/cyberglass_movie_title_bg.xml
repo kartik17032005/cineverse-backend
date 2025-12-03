@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base dark gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#60000000"
+                android:endColor="#90000000" />
+            <corners android:bottomLeftRadius="25dp" android:bottomRightRadius="25dp" />
+        </shape>
+    </item>
+    <!-- Glass frost effect -->
+    <item android:insetTop="3dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#30FFFFFF"
+                android:centerColor="#40FFFFFF"
+                android:endColor="#50FFFFFF" />
+            <corners android:bottomLeftRadius="22dp" android:bottomRightRadius="22dp" />
+        </shape>
+    </item>
+    <!-- Neon accent line -->
+    <item android:insetTop="55dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#0000FFFF"
+                android:centerColor="#FF00FFFF"
+                android:endColor="#0000FFFF" />
+            <corners android:bottomLeftRadius="25dp" android:bottomRightRadius="25dp" />
+        </shape>
+    </item>
+</layer-list>

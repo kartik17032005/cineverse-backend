@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="12dp"
+    app:cardUseCompatPadding="true"
+    android:background="#111118">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Banner Image -->
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transitionName="posterTransition"
+            android:scaleType="centerCrop"
+            android:contentDescription="Movie Banner" />
+
+        <!-- Optional border effect, initially hidden -->
+        <View
+            android:id="@+id/bannerBorder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:alpha="0" />
+
+        <!-- Lottie Animation for touches or effects, initially hidden -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/bannerEffect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:lottie_fileName="drop_effect.json"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_speed="1.8" />
+
+        <!-- Glow Overlay -->
+        <View
+            android:id="@+id/glowOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/glow_background"
+            android:alpha="0"
+            android:visibility="gone" />
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

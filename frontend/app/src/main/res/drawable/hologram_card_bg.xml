@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base glass effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#30FFFFFF"
+                android:centerColor="#20FFFFFF"
+                android:endColor="#10FFFFFF" />
+            <corners android:radius="28dp" />
+            <stroke android:width="2dp" android:color="#4000FFFF" />
+        </shape>
+    </item>
+    <!-- Inner glow -->
+    <item android:insetLeft="2dp" android:insetTop="2dp" android:insetRight="2dp" android:insetBottom="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="45"
+                android:startColor="#2000FFFF"
+                android:centerColor="#1000FFFF"
+                android:endColor="#0000FFFF" />
+            <corners android:radius="26dp" />
+        </shape>
+    </item>
+</layer-list>

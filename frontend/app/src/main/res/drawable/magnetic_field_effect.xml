@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer magnetic field -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="150dp"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#1000FFFF"
+                android:endColor="#2000FFFF" />
+        </shape>
+    </item>
+    <!-- Inner field -->
+    <item android:insetLeft="30dp" android:insetTop="30dp" android:insetRight="30dp" android:insetBottom="30dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="120dp"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#1500FFFF"
+                android:endColor="#0000FFFF" />
+        </shape>
+    </item>
+    <!-- Core field -->
+    <item android:insetLeft="60dp" android:insetTop="60dp" android:insetRight="60dp" android:insetBottom="60dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="90dp"
+                android:startColor="#2000FFFF"
+                android:centerColor="#1000FFFF"
+                android:endColor="#0000FFFF" />
+        </shape>
+    </item>
+</layer-list>

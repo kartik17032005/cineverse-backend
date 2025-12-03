@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer pulse glow -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="30dp"
+                android:startColor="#80FF0080"
+                android:centerColor="#60FF0080"
+                android:endColor="#00FF0080" />
+        </shape>
+    </item>
+    <!-- Glass circle -->
+    <item android:insetLeft="4dp" android:insetTop="4dp" android:insetRight="4dp" android:insetBottom="4dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="20dp"
+                android:startColor="#80FFFFFF"
+                android:centerColor="#60FFFFFF"
+                android:endColor="#40FFFFFF" />
+            <stroke android:width="2dp" android:color="#FFFF0080" />
+        </shape>
+    </item>
+    <!-- Inner highlight -->
+    <item android:insetLeft="12dp" android:insetTop="12dp" android:insetRight="12dp" android:insetBottom="12dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="12dp"
+                android:startColor="#60FF0080"
+                android:endColor="#00FF0080" />
+        </shape>
+    </item>
+</layer-list>

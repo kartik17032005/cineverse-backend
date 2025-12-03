@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_categories"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111118"
+    android:padding="0dp">
+
+    <!-- Glowing/Cinematic Header (with shadow and letter spacing) -->
+    <TextView
+        android:id="@+id/tvCategoriesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="CATEGORIES"
+        android:textAlignment="center"
+        android:textColor="#00FFF7"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:shadowColor="#8000FFF7"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="20"
+        android:letterSpacing="0.10"
+        android:paddingTop="32dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subheading or tagline for more polish (optional) -->
+    <TextView
+        android:id="@+id/tvCategoriesSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Find your mood. Pick your world."
+        android:textColor="#AEEAFF"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:paddingTop="0dp"
+        android:paddingBottom="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCategoriesTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Glassy, modern grid with pleasant padding and spacing -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:paddingTop="4dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCategoriesSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

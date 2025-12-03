@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="185dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="9dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/animated_glow_glass_bg"
+        android:clipToPadding="false">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieCategoryIcon"
+            android:layout_width="97dp"
+            android:layout_height="111dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_renderMode="software"
+            android:contentDescription="Category Icon" />
+
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Action"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

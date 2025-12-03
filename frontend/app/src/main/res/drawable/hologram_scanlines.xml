@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Horizontal scan lines -->
+    <item>
+        <bitmap
+            android:src="@drawable/scan_line_pattern"
+            android:tileMode="repeat"
+            android:alpha="0.3" />
+    </item>
+    <!-- Alternative: Use shape with repeating pattern -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#2000FFFF"
+                android:endColor="#00FFFFFF" />
+            <size android:height="2dp" />
+        </shape>
+    </item>
+</layer-list>

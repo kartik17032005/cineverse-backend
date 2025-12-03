@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Selected Dot: slightly bigger solid circle -->
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <size android:width="10dp" android:height="10dp" />  <!-- smaller size -->
+            <solid android:color="#00FFF7" />                   <!-- cyan accent -->
+        </shape>
+    </item>
+
+    <!-- Unselected Dot: smaller semi-transparent circle -->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="6dp" android:height="6dp" />  <!-- smaller size -->
+            <solid android:color="#40FFFFFF" />                 <!-- semi-transparent white -->
+        </shape>
+    </item>
+
+</selector>
+
+

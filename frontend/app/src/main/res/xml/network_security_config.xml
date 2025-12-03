@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow TMDb -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.themoviedb.org</domain>
+    </domain-config>
+
+    <!-- Allow Render backend -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.26.135.247</domain>
+    </domain-config>
+</network-security-config>

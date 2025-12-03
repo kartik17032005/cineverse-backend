@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Diagonal stream 1 -->
+    <item android:insetLeft="-50dp" android:insetTop="-100dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="45"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#4000FFFF"
+                android:endColor="#00FFFFFF" />
+            <size android:width="400dp" android:height="2dp" />
+        </shape>
+    </item>
+    <!-- Diagonal stream 2 -->
+    <item android:insetLeft="-100dp" android:insetTop="-50dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#3000FFFF"
+                android:endColor="#00FFFFFF" />
+            <size android:width="500dp" android:height="1dp" />
+        </shape>
+    </item>
+    <!-- Horizontal stream -->
+    <item android:insetTop="200dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#5000FFFF"
+                android:endColor="#00FFFFFF" />
+            <size android:height="1dp" />
+        </shape>
+    </item>
+</layer-list>
